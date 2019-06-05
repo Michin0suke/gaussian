@@ -1,9 +1,14 @@
 {
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es6": true
     },
-    "extends": "standard",
+    "extends": [
+        "standard",
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -19,5 +24,9 @@
         "react"
     ],
     "rules": {
+        "no-console": "off",
+        "react/no-unescaped-entities": "off",
+        "react/prop-types": "off",
+        "no-var":"warn"
     }
 }
